@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button id="seven" >7</button>
+            <button id="eight">8</button>
+            <button id="nine">9</button>
+            <button class="operator" id="plus">+</button>
+
+            <button id="four">4</button>
+            <button id="five">5</button>
+            <button id="six">6</button>
+            <button class="operator" id="minus">-</button>
+
+            <button id="one">1</button>
+            <button id="two">2</button>
+            <button id="three">3</button>
+            <button class="operator" id="multiply">x</button>
+            
+            <button class="clear" id="clear">C</button>
+            <button id="zero">0</button>
+            <button class="operator" id="equals">=</button>
+            <button class="operator" id="divide">/</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let seven = document.getElementById("seven");
+            let eight = document.getElementById("eight");
+            let nine = document.getElementById("nine");
+            let four = document.getElementById("four");
+            let five = document.getElementById("five");
+            let six = document.getElementById("six");
+            let one = document.getElementById("one");
+            let two = document.getElementById("two");
+            let three = document.getElementById("three");
+            let zero = document.getElementById("zero");
+
+            let minus = document.getElementById("minus");
+            let plus = document.getElementById("plus");
+            let multiply = document.getElementById("multiply");
+            let divide = document.getElementById("divide");
+
+            let equals = document.getElementById("equals");
+
+            let clear = document.getElementById("clear");
+            
+
+
+            let LastAppendedIsOperator = false;
+
+            function clearDisplay() {
+                let display = document.getElementById("display");
+                display.innerHTML = '0';
+                LastAppendedIsOperator = false;
+            }
+
+            function calculateResult() {
+                let display = document.getElementById("display");
+                try {
+                    let result = eval(display.innerHTML);
+                    display.innerHTML = result.toString();
+                 
+                    display.scrollTop = display.scrollHeight;
+                } catch (error) {
+                    display.innerHTML = 'Error';
+                }
+                LastAppendedIsOperator = false;
+            }
+
+            function appendToDisplay(value, isOperator = false) {
+                let display = document.getElementById("display");
+
+              
+
+                if (isOperator) {
+                   
+                    if (LastAppendedIsOperator) {
+                        return;
+                    }
+                 
+                    if (display.innerHTML === '0') {
+                        return;
+                    }
+                    display.innerHTML += value;
+                    LastAppendedIsOperator = true;
+                }
+           
+                else {
+                    if (display.innerHTML === '0') {
+                        display.innerHTML = value;
+                    } else {
+                        display.innerHTML += value;
+                    }
+                    LastAppendedIsOperator = false;
+                }
+            }
+
+            seven.addEventListener('click', () => appendToDisplay('7'));
+            eight.addEventListener('click', () => appendToDisplay('8'));
+            nine.addEventListener('click', () => appendToDisplay('9'));
+            four.addEventListener('click', () => appendToDisplay('4'));
+            five.addEventListener('click', () => appendToDisplay('5'));
+            six.addEventListener('click', () => appendToDisplay('6'));
+            one.addEventListener('click', () => appendToDisplay('1'));
+            two.addEventListener('click', () => appendToDisplay('2'));
+            three.addEventListener('click', () => appendToDisplay('3'));
+            zero.addEventListener('click', () => appendToDisplay('0'));
+
+            minus.addEventListener('click', () => appendToDisplay('-', true));
+            plus.addEventListener('click', () => appendToDisplay('+', true));
+            multiply.addEventListener('click', () => appendToDisplay('*', true));
+            divide.addEventListener('click', () => appendToDisplay('/', true));
+
+            clear.addEventListener('click', () => clearDisplay());
+           
+            equals.addEventListener('click', () => calculateResult());
+
+        });
+    </script>
+</body>
+</html>
