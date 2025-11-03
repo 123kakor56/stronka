@@ -27,8 +27,9 @@
             
             <button class="clear" id="clear">C</button>
             <button id="zero">0</button>
-            <button class="operator" id="equals">=</button>
             <button class="operator" id="divide">/</button>
+            <button class="operator" id="dot">,</button>
+            <button class="operator_equals" id="equals">=</button>
         </div>
     </div>
 
@@ -54,6 +55,7 @@
 
             let clear = document.getElementById("clear");
             
+            let dot = document.getElementById("dot")
 
 
             let LastAppendedIsOperator = false;
@@ -72,7 +74,7 @@
                  
                     display.scrollTop = display.scrollHeight;
                 } catch (error) {
-                    display.innerHTML = 'Error';
+                    display.innerHTML = 'Syntax Error';
                 }
                 LastAppendedIsOperator = false;
             }
@@ -120,6 +122,7 @@
             plus.addEventListener('click', () => appendToDisplay('+', true));
             multiply.addEventListener('click', () => appendToDisplay('*', true));
             divide.addEventListener('click', () => appendToDisplay('/', true));
+            dot.addEventListener('click', () => appendToDisplay('.', true));
 
             clear.addEventListener('click', () => clearDisplay());
            

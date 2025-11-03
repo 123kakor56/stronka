@@ -229,6 +229,13 @@ label {
             color: white;
         }
 
+        .operator_equals {
+    grid-column: 1 / -1;
+    background-color: #ffa500;
+    color: white;
+}
+
+
         .operator:hover {
             background-color: #ff8c00;
         }
