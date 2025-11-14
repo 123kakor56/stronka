@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zad5</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body class="invoice-background">
+    <div class="invoice-canvas">
+        <img src="img/Faktura - wzór_page-0001.jpg" alt="Szablon faktury" class="invoice-template">
+        <div id="header-block" class="invoice-block" style="top: 6%; right: 6%; width: 28%; text-align: right;"></div>
+        <div id="dates-block" class="invoice-block" style="top: 14%; right: 6%; width: 28%; text-align: right;"></div>
+        <div id="seller-block" class="invoice-block" style="top: 20%; left: 6%; width: 32%;"></div>
+        <div id="buyer-block" class="invoice-block" style="top: 20%; right: 6%; width: 32%;"></div>
+        <div id="bank-block" class="invoice-block" style="top: 33%; left: 6%; width: 32%;"></div>
+        <div id="invoice-items" class="invoice-items" style="top: 43%; left: 6%; width: 88%;"></div>
+        <div id="totals-block" class="invoice-block" style="top: 79%; right: 6%; width: 30%; text-align: right;"></div>
+        <div id="notes-block" class="invoice-block" style="top: 86%; left: 6%; width: 60%;"></div>
+        <div id="issuer-block" class="invoice-block" style="top: 92%; right: 6%; width: 28%; text-align: right;"></div>
+        <div id="invoice-error" class="invoice-block" style="top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%; text-align: center; display: none; background: rgba(255, 230, 230, 0.95);">
+            Nie udało się wczytać danych faktury.
+        </div>
+    </div>
+    <script src="js/invoice.js"></script>
+</body>
+</html>

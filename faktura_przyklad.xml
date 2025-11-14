@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Faktura wersja="1.0">
+  <Naglowek>
+    <Numer>FV/11/2025/001</Numer>
+    <DataWystawienia>2025-11-03</DataWystawienia>
+    <MiejsceWystawienia>Warszawa</MiejsceWystawienia>
+    <DataDostawyLubZakonczeniaUslugi>2025-11-03</DataDostawyLubZakonczeniaUslugi>
+    <TerminPlatnosci>2025-11-17</TerminPlatnosci>
+    <FormaPlatnosci>Przelew</FormaPlatnosci>
+    <Waluta>PLN</Waluta>
+  </Naglowek>
+
+  <Sprzedawca>
+    <Nazwa>ABC Sp. z o.o.</Nazwa>
+    <NIP>5252654321</NIP>
+    <Adres>
+      <Ulica>ul. Przykładowa 1</Ulica>
+      <KodPocztowy>00-001</KodPocztowy>
+      <Miasto>Warszawa</Miasto>
+      <Kraj>Polska</Kraj>
+    </Adres>
+    <Bank>
+      <NazwaBanku>mBank S.A.</NazwaBanku>
+      <NumerKonta>PL27114020040000300201355387</NumerKonta>
+    </Bank>
+  </Sprzedawca>
+
+  <Nabywca>
+    <Nazwa>XYZ S.A.</Nazwa>
+    <NIP>6761234567</NIP>
+    <Adres>
+      <Ulica>ul. Klientowa 2</Ulica>
+      <KodPocztowy>31-000</KodPocztowy>
+      <Miasto>Kraków</Miasto>
+      <Kraj>Polska</Kraj>
+    </Adres>
+  </Nabywca>
+
+  <Pozycje>
+    <Pozycja>
+      <Lp>1</Lp>
+      <Nazwa>Usługa programistyczna</Nazwa>
+      <PKWiU>62.01.11.0</PKWiU>
+      <JM>godz.</JM>
+      <Ilosc>10.00</Ilosc>
+      <CenaNetto>150.00</CenaNetto>
+      <WartoscNetto>1500.00</WartoscNetto>
+      <StawkaVAT>23%</StawkaVAT>
+      <KwotaVAT>345.00</KwotaVAT>
+      <WartoscBrutto>1845.00</WartoscBrutto>
+    </Pozycja>
+
+    <Pozycja>
+      <Lp>2</Lp>
+      <Nazwa>Hosting roczny</Nazwa>
+      <PKWiU>63.11.10.0</PKWiU>
+      <JM>szt.</JM>
+      <Ilosc>1.00</Ilosc>
+      <CenaNetto>300.00</CenaNetto>
+      <WartoscNetto>300.00</WartoscNetto>
+      <StawkaVAT>23%</StawkaVAT>
+      <KwotaVAT>69.00</KwotaVAT>
+      <WartoscBrutto>369.00</WartoscBrutto>
+    </Pozycja>
+
+    <Pozycja>
+      <Lp>3</Lp>
+      <Nazwa>Projekt graficzny</Nazwa>
+      <PKWiU>74.10.20.0</PKWiU>
+      <JM>szt.</JM>
+      <Ilosc>1.00</Ilosc>
+      <CenaNetto>500.00</CenaNetto>
+      <WartoscNetto>500.00</WartoscNetto>
+      <StawkaVAT>8%</StawkaVAT>
+      <KwotaVAT>40.00</KwotaVAT>
+      <WartoscBrutto>540.00</WartoscBrutto>
+    </Pozycja>
+  </Pozycje>
+
+  <Podsumowanie>
+    <RazemNetto>2300.00</RazemNetto>
+    <RazemVAT>454.00</RazemVAT>
+    <RazemBrutto>2754.00</RazemBrutto>
+
+    <RozbicieStawekVAT>
+      <Stawka kod="ZW">
+        <WartoscNetto>0.00</WartoscNetto>
+        <KwotaVAT>0.00</KwotaVAT>
+        <WartoscBrutto>0.00</WartoscBrutto>
+      </Stawka>
+      <Stawka kod="0%">
+        <WartoscNetto>0.00</WartoscNetto>
+        <KwotaVAT>0.00</KwotaVAT>
+        <WartoscBrutto>0.00</WartoscBrutto>
+      </Stawka>
+      <Stawka kod="5%">
+        <WartoscNetto>0.00</WartoscNetto>
+        <KwotaVAT>0.00</KwotaVAT>
+        <WartoscBrutto>0.00</WartoscBrutto>
+      </Stawka>
+      <Stawka kod="8%">
+        <WartoscNetto>500.00</WartoscNetto>
+        <KwotaVAT>40.00</KwotaVAT>
+        <WartoscBrutto>540.00</WartoscBrutto>
+      </Stawka>
+      <Stawka kod="23%">
+        <WartoscNetto>1800.00</WartoscNetto>
+        <KwotaVAT>414.00</KwotaVAT>
+        <WartoscBrutto>2214.00</WartoscBrutto>
+      </Stawka>
+    </RozbicieStawekVAT>
+  </Podsumowanie>
+
+  <Uwagi>Zapłata w terminie 14 dni. Dziękujemy za współpracę.</Uwagi>
+  <FaktureWystawil>Jan Kowalski</FaktureWystawil>
+</Faktura>
