@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Zad5.xsl"?>
+<faktura>
+  <numer_faktury>
+    S230988/kakor/25
+  </numer_faktury>
+  <data_wystawienia>
+    14.11.2025
+  </data_wystawienia>
+  <miejsce_wystawienia>
+    Warszawa
+  </miejsce_wystawienia>
+  <termin_platnosci>
+    14.11.2025
+  </termin_platnosci>
+  <forma_platnosci>
+    Karta płatnicza
+  </forma_platnosci>
+  <data_wykonania>
+    14.11.2025
+  </data_wykonania>
+  <uwagi>
+    wyślij fakturę na adres e-mail: 123kakor56@gmail.com
+  </uwagi>
+  <wystawiajacy>
+    Kacper Korus
+  </wystawiajacy>
+  <sprzedawca>
+    <nazwa>
+      Sigma.com Sp. z o.o.
+    </nazwa>
+    <adres>
+      ul. SkibidiSigma 10, 00-001 Warszawa
+    </adres>
+    <NIP>
+      123-456-78-90
+    </NIP>
+  </sprzedawca>
+  <nabywca>
+    <nazwa>
+      Alfa sp. z o.o.
+    </nazwa>
+    <adres>
+      ul. MojaUlica 5, 00-002 Kraków
+    </adres>
+    <NIP>
+      231-742-06-69
+    </NIP>
+  </nabywca>
+  <konto>
+    <nazwa_banku>
+      Mbank
+    </nazwa_banku>
+    <numer_konta>
+    69-420-1337-0042-0000-4200-1337
+  </numer_konta>
+  </konto>
+  <uslugi>
+    <usluga>
+      <nazwa>
+        Tworzenie strony internetowej
+      </nazwa>
+      <ilosc>
+        1
+      </ilosc>
+      <cena_jednostkowa>
+        69420.00
+      </cena_jednostkowa>
+      <stawka_VAT>
+        23%
+      </stawka_VAT>
+      <wartosc>
+        85386.60
+      </wartosc>
+    </usluga>
+    <usluga>
+      <nazwa>
+       Wymiana koła w samochodzie
+      </nazwa>
+      <ilosc>
+        1
+      </ilosc>
+      <cena_jednostkowa>
+        3000.00
+      </cena_jednostkowa>
+      <stawka_VAT>
+        23%
+      </stawka_VAT>
+      <wartosc>
+        3690.00
+      </wartosc>
+    </usluga>
+    <usluga>
+      <nazwa>
+        kanapka z szynką
+      </nazwa>
+      <ilosc>
+        9999
+      </ilosc>
+      <cena_jednostkowa>
+        4.50
+      </cena_jednostkowa>
+      <stawka_VAT>
+        23%
+      </stawka_VAT>
+      <wartosc>
+        55315.39
+      </wartosc>
+    </usluga>
+    <usluga>
+      <nazwa>
+        Zakończenie Projektu IT
+      </nazwa>
+      <ilosc>
+        1
+      </ilosc>
+      <cena_jednostkowa>
+        1
+      </cena_jednostkowa>
+      <stawka_VAT>
+        23%
+      </stawka_VAT>
+      <wartosc>
+        1.23
+      </wartosc>
+    </usluga>
+  </uslugi>
+</faktura>
