@@ -20,7 +20,7 @@
                 </style>
             </head>
             <body>
-                <div style="position: relative; width: 100%; max-width: 1200px; margin: 0 auto; padding-top: 141.4%;">
+                <div style="position: relative; width: 100%; max-width: 90%; margin: 0 auto; padding-top: 141.4%;">
                    
                    <!-- Numer faktury -->
                    <div style="position: absolute; top: 14.5%; right: 65%; font-size: 14px; font-weight: bold; text-align: right;">
@@ -28,18 +28,18 @@
                    </div>
                    
                    <!-- Daty -->
-                   <div style="position: absolute; top: 22%; right: 89%; font-size: 12px; text-align: right; line-height: 1.6;">
+                   <div style="position: absolute; top: 22%; right: 81%; font-size: 12px; text-align: right; line-height: 1.6;">
                       
                        <div><xsl:value-of select="faktura/termin_platnosci"/></div>
                    </div>
 
-                    <div style="position: absolute; top: 14%; right: 14%; font-size: 12px; text-align: right; line-height: 1.6;">
+                    <div style="position: absolute; top: 14%; right: 23%; font-size: 12px; text-align: right; line-height: 1.6;">
                        <div> <xsl:value-of select="faktura/miejsce_wystawienia    "/>  <xsl:value-of select="faktura/data_wystawienia"/> </div>
                        
                    </div>
                    
                    <!-- Sprzedawca -->
-                   <div style="position: absolute; top: 29%; left: 10%; font-size: 18px; line-height: 1.5; max-width: 32%;">
+                   <div style="position: absolute; top: 29%; left: 20%; font-size: 18px; line-height: 1.5; max-width: 32%;">
                       
                        <xsl:value-of select="faktura/sprzedawca/nazwa"/><br/>
                        <xsl:value-of select="faktura/sprzedawca/adres"/><br/>
@@ -47,7 +47,7 @@
                    </div>
                    
                    <!-- Nabywca -->
-                   <div style="position: absolute; top: 29%; right: 6%; font-size: 18px; line-height: 1.5; max-width: 32%; text-align: left;">
+                   <div style="position: absolute; top: 29%; right: 19%; font-size: 18px; line-height: 1.5; max-width: 32%; text-align: left;">
                       
                        <xsl:value-of select="faktura/nabywca/nazwa"/><br/>
                        <xsl:value-of select="faktura/nabywca/adres"/><br/>
@@ -55,53 +55,58 @@
                    </div>
                    
                    <!-- Dane bankowe -->
-                   <div style="position: absolute; top: 35.5%; left: 11%; font-size: 22px; line-height: 1.5; max-width: 50%;">
+                   <div style="position: absolute; top: 35.5%; left: 20%; font-size: 22px; line-height: 1.5; max-width: 50%;">
                        <strong></strong><br/>
                        <xsl:value-of select="faktura/konto/nazwa_banku"/>
                        <xsl:value-of select="faktura/konto/numer_konta"/>
                    </div>
                    
                    <!-- Tabela usług -->
-                   <div style="position: absolute; top: 45%; left: 6%; width: 88%; font-size: 30px;">
+                   <div style="position: absolute; top: 45%; left: 6%; width: 100%; font-size: 30px;">
                        <table style="width: 100%; border-collapse: collapse;">
                            <thead>
-                               <tr style="font-weight: bold;">
-                                
-                                   <th style="width: 35%; text-align: left; padding: 3px;">Nazwa</th>
-                                   <th style="width: 10%; text-align: center; padding: 3px;">Ilość</th>
-                                   <th style="width: 0%; text-align: right; padding: 3px;" >Cena jedn.</th>
-                                   <th style="width: 10%; text-align: center; padding: 3px;">VAT</th>
-                                   <th style="width: 15%; text-align: right; padding: 3px;">Wartość</th>
+                               <tr style="font-weight: bold; padding-top: 10px;">
+                                   <!-- Zmien wartosci padding dla kazdej kolumny osobno: padding: gora prawo dol lewo; -->
+                                   <th style="text-align: left; width: 1px; padding: 3px 0px 3px 230px;"></th>
+                                   <th style="text-align: center;width: 20px ; padding: 0px 0px 3px 185 px;"></th>
+                                   <th style="text-align: left; width: 110px ; padding: 3px 12px 3px 0px;"></th>
+                                   <th style="text-align: center;width: 20px ; padding: 3px 12px 3px px;"></th>
+                                   <th style="text-align: center; width: 200px ; padding: 3px 5px 3px 20px;"></th>
                                </tr>
                            </thead>
                            <tbody>
                                <xsl:for-each select="faktura/uslugi/usluga">
-                                   <tr>
-                                   
-                                       <td style="text-align: left; padding: 3px;"><xsl:value-of select="nazwa"/></td>
-                                       <td style="text-align: center; padding: 3px;"><xsl:value-of select="ilosc"/></td>
-                                       <td style="text-align: right; padding: 3px;"><xsl:value-of select="cena_jednostkowa"/> PLN</td>
-                                       <td style="text-align: center; padding: 3px;"><xsl:value-of select="stawka_VAT"/></td>
-                                       <td style="text-align: right; padding: 3px;"><xsl:value-of select="wartosc"/> PLN</td>
+                                   <tr style="font-weight: bold; height: 45px;">
+                                       <!-- Dopasuj padding komorek danych do naglowkow -->
+                                       <td style="text-align: left;width: 1px; padding: 3px 0px 3px 230px;"><xsl:value-of select="nazwa"/></td>
+                                       <td style="text-align: center; padding:  0px 0px 3px 43px;"><xsl:value-of select="ilosc"/></td>
+                                       <td style="text-align: left; padding: 3px 12px 3px 0px;"><xsl:value-of select="cena_jednostkowa"/> PLN</td>
+                                       <td style="text-align: center; padding: 3px 12px 3px 0px;"><xsl:value-of select="stawka_VAT"/></td>
+                                       <td style="text-align: center; padding: 3px 5px 3px 0px;"><xsl:value-of select="wartosc"/> PLN</td>
                                    </tr>
                                </xsl:for-each>
                            </tbody>
                        </table>
                    </div>
                    
+                   <!-- Suma wartosci -->
+                   <div style="position: absolute; top: 75%; right: 8%; font-size: 12px; font-weight: bold; text-align: right;">
+                        <xsl:value-of select="sum(faktura/uslugi/usluga/wartosc)"/> PLN
+                   </div>
+                   
                    <!-- Podsumowanie -->
-                   <div style="position: absolute; top: 79%; right: 6%; font-size: 12px; text-align: right; line-height: 1.6;">
-                       <div>Forma płatności: <xsl:value-of select="faktura/forma_platnosci"/></div>
+                   <div style="position: absolute; top: 22%; right: 62%; font-size: 12px; text-align: right; line-height: 1.6;">
+                       <div> <xsl:value-of select="faktura/forma_platnosci"/></div>
                    </div>
                    
                    <!-- Uwagi -->
-                   <div style="position: absolute; top: 86%; left: 6%; font-size: 11px; max-width: 60%;">
+                   <div style="position: absolute; top: 73%; left: 18%; font-size: 21px; max-width: 60%;">
                        <xsl:value-of select="faktura/uwagi"/>
                    </div>
                    
                    <!-- Wystawił -->
-                   <div style="position: absolute; top: 92%; right: 6%; font-size: 11px; text-align: right;">
-                       Wystawił: <xsl:value-of select="faktura/wystawiajacy"/>
+                   <div style="position: absolute; top: 81%; right: 63%; font-size: 40px; text-align: right;">
+                        <xsl:value-of select="faktura/wystawiajacy"/>
                    </div>
 
                 </div>

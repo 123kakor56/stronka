@@ -65,7 +65,7 @@ body.invoice-background {
     position: absolute;
     background: rgba(255, 255, 255, 0.78);
     border-radius: 4px;
-    padding: 6px 8px;
+    padding: 6px 8px; /* zmien tu padding aby przesunac tabele uslug */
     display: grid;
     gap: 4px;
     max-height: 260px;
@@ -74,14 +74,14 @@ body.invoice-background {
 
 .invoice-item-row {
     display: grid;
-    grid-template-columns: 40px 260px 80px 80px 110px 120px 80px 120px;
+    grid-template-columns: 40px 260px 80px 80px 110px 120px 80px 120px; /* zmien szerokosc kolumn tutaj: LP, Nazwa, JM, Ilosc, Cena netto, Wartosc netto, VAT, Brutto */
     gap: 6px;
     font-size: 12px;
     align-items: center;
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 3px;
-    padding: 4px 6px;
+    padding: 4px 6px; /* zmien padding aby przesunac tekst w komorce */
 }
 
 .invoice-item-row.header {
