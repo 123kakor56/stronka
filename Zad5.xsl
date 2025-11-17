@@ -62,7 +62,7 @@
                    </div>
                    
                    <!-- Tabela usług -->
-                   <div style="position: absolute; top: 45%; left: 6%; width: 100%; font-size: 30px;">
+                   <div style="position: absolute; top: 45%; left: 6%; width: 100%; font-size: 11px;">
                        <table style="width: 100%; border-collapse: collapse;">
                            <thead>
                                <tr style="font-weight: bold; padding-top: 10px;">
@@ -76,7 +76,7 @@
                            </thead>
                            <tbody>
                                <xsl:for-each select="faktura/uslugi/usluga">
-                                   <tr style="font-weight: bold; height: 45px;">
+                                   <tr style="font-weight: bold; height: 45px;  font-size: 13px;">
                                        <!-- Dopasuj padding komorek danych do naglowkow -->
                                        <td style="text-align: left;width: 1px; padding: 3px 0px 3px 230px;"><xsl:value-of select="nazwa"/></td>
                                        <td style="text-align: center; padding:  0px 0px 3px 43px;"><xsl:value-of select="ilosc"/></td>
@@ -90,7 +90,7 @@
                    </div>
                    
                    <!-- Suma wartosci -->
-                   <div style="position: absolute; top: 75%; right: 8%; font-size: 12px; font-weight: bold; text-align: right;">
+                   <div style="position: absolute; top: 75%; right: 8%; font-size: 8px; font-weight: bold; text-align: right;">
                         <xsl:value-of select="sum(faktura/uslugi/usluga/wartosc)"/> PLN
                    </div>
                    
