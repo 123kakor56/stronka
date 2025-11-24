@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="lewy" style="width:100%; overflow:auto;">
+<form action="Zad6Wynik.php" method="post" >
+
+  <div style="width: 45%;  float:left;  padding:0%;" >
+  <label for="firstName">Imię:</label>
+  <input type="text" id="firstName" name="firstName"><br><br>
+  <label for="lastName">Nazwisko:</label>
+  <input type="text" id="lastName" name="lastName"><br><br>
+  <label for="birthDate">Data urodzenia:</label>
+  <input type="date" id="birthDate" name="birthDate"><br><br>
+  <label for="password">Hasło:</label>
+  <input type="password" id="password" name="password"><br><br>
+  <label for="street">Ulica</label>
+  <input type="text" id="street" name="street"><br><br>
+  <label for="city">Miasto</label>
+  <input type="text" id="city" name="city"><br><br>
+  <label for="email">E-mail</label>
+  <input type="email" id="email" name="email"><br><br>
+
+    </div>
+
+ <div class="srodek"    > 😀</div>
+
+ <div class="prawy" style="width: 45%; float:left;   padding:0px;"  >
+    <label for="">  Płeć:<br></label>
+
+  
+  <input type="radio" id="genderFemale" name="gender" value="female">
+  <label for="genderFemale">Baba</label><br>
+  <input type="radio" id="genderMale" name="gender" value="male">
+  <label for="genderMale">Chłop</label><br><br>
+   <label for="voivodeship">Uwagi:</label>
+   <textarea name="comments" id="comments" placeholder="Uwagi"></textarea><br><br>
+    <label for="voivodeship">Wojewódstwo:</label>
+  <input type="text" id="voivodeship" name="voivodeship"><br><br>
+  <label for="phone">Telefon:</label>
+  <input type="number" id="phone" name="phone"><br><br>
+  <button type="submit">Wyślij</button>
+
+
+</div>
+
+</form>
+
+
+</div>
+
+  
+
+
+
+
+
+</body>
+</html>
