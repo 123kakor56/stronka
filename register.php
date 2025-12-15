@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register_submit'])) {
     $name = trim($_POST['name']);
     $last_name = trim($_POST['last_name']);
     $gender = $_POST['gender'] ?? '';
-    $preference = $_POST['preference'] ?? '';
+    $preference = 'Windows'; // Stała wartość
     $password = $_POST['password'];
     $password_confirm = $_POST['password_confirm'];
     
@@ -27,12 +27,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register_submit'])) {
         'login' => $login,
         'name' => $name,
         'last_name' => $last_name,
-        'gender' => $gender,
-        'preference' => $preference
+        'gender' => $gender
     ];
     
     // Walidacja
-    if (empty($login) || empty($name) || empty($last_name) || empty($gender) || empty($preference) || empty($password)) {
+    if (empty($login) || empty($name) || empty($last_name) || empty($gender) || empty($password)) {
         $error = "Proszę wypełnić wszystkie pola.";
     } elseif ($password !== $password_confirm) {
         $error = "Hasła nie są identyczne.";
@@ -314,16 +313,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register_submit'])) {
                     <option value="Mężczyzna" <?= ($form_data['gender'] ?? '') === 'Mężczyzna' ? 'selected' : '' ?>>Mężczyzna</option>
                     <option value="Kobieta" <?= ($form_data['gender'] ?? '') === 'Kobieta' ? 'selected' : '' ?>>Kobieta</option>
                     <option value="Inna" <?= ($form_data['gender'] ?? '') === 'Inna' ? 'selected' : '' ?>>Inna</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="preference">System operacyjny *</label>
-                <select id="preference" name="preference" required>
-                    <option value="">Wybierz...</option>
-                    <option value="Windows" <?= ($form_data['preference'] ?? '') === 'Windows' ? 'selected' : '' ?>>Windows</option>
-                    <option value="MacOS" <?= ($form_data['preference'] ?? '') === 'MacOS' ? 'selected' : '' ?>>MacOS</option>
-                    <option value="Linux" <?= ($form_data['preference'] ?? '') === 'Linux' ? 'selected' : '' ?>>Linux</option>
                 </select>
             </div>
             
